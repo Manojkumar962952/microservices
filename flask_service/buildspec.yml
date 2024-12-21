@@ -3,10 +3,12 @@ version: 0.2
 phases:
   install:
     commands:
-      - python3 -m venv venv
-      - source venv/bin/activate
-      - pip install --no-cache-dir -r requirements.txt
-
+      - python3 --version    # Check Python version
+      - sudo apt-get update
+      - sudo apt-get install python3-venv -y  # Ensure venv is installed
+      - python3 -m venv venv  # Create a virtual environment
+      - source venv/bin/activate  # Activate the virtual environment
+      - pip install --no-cache-dir -r requirements.txt  # Install dependencies
   build:
     commands:
       - docker build -t flask_service .
