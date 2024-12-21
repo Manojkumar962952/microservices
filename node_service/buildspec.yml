@@ -1,0 +1,16 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - npm install
+
+  build:
+    commands:
+      - docker build -t nodejs_service .
+
+artifacts:
+  files:
+    - Dockerfile
+    - index.js
+    - package.json
