@@ -3,7 +3,7 @@ version: 0.2
 phases:
   install:
     commands:
-      - python3 --version    # Check Python versionss
+      - python3 --version    # Check Python versionsss
       - sudo apt-get update
       - sudo apt-get install python3-venv -y  # Ensure venv is installed
       - python3 -m venv venv  # Create a virtual environment
