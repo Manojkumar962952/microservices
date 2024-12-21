@@ -3,7 +3,9 @@ version: 0.2
 phases:
   install:
     commands:
-      - npm install
+      # Navigate to the service folder and install dependencies
+      - cd nodejs_service  # Adjust this path to your actual service folder
+      - npm install  # Install dependencies in the correct directory
 
   build:
     commands:
@@ -12,5 +14,5 @@ phases:
 artifacts:
   files:
     - Dockerfile
-    - index.js
-    - package.json
+    - app.js  # Replace with your service entry file
+    - package.json  # Include this in artifacts to deploy or distribute
