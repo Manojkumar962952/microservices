@@ -3,8 +3,9 @@ version: 0.2
 phases:
   install:
     commands:
-      # Navigate to the service folder and install dependencies
-      - cd nodejs_service  # Adjust this path to your actual service folder
+      # Check the repository structure to ensure you are navigating to the correct directory
+      - ls -l  # List files to confirm directory structure
+      - cd nodejs_service  # Make sure the directory exists
       - npm install  # Install dependencies in the correct directory
 
   build:
