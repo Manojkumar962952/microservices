@@ -1,0 +1,16 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - pip install -r requirements.txt
+
+  build:
+    commands:
+      - docker build -t flask_service .
+
+artifacts:
+  files:
+    - Dockerfile
+    - app.py
+    - requirements.txt
